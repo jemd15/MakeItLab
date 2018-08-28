@@ -1,14 +1,52 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Make It Lab App
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list>
+    <ion-item>
+      <ion-label>Cowork</ion-label>
+      <ion-toggle (click)='action("cowork")' checked="{{lights.cowork}}"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Workshop Central</ion-label>
+      <ion-toggle (click)='action("workshop central")' checked="{{lights.workshopCentral}}"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Workshop Lateral</ion-label>
+      <ion-toggle (click)='action("workshop lateral")' checked="{{lights.workshopLateral}}"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Impresoras 3D</ion-label>
+      <ion-toggle (click)='action("impresoras 3d")' checked="{{lights.impresoras3D}}"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Ideas 1</ion-label>
+      <ion-toggle (click)='action("ideas 1")' checked="{{lights.ideas1}}"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Ideas 2</ion-label>
+      <ion-toggle (click)='action("ideas 2")' checked="{{lights.ideas2}}"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Free Work Derecho</ion-label>
+      <ion-toggle (click)='action("free work derecho")' checked="{{lights.freeWorkDerecho}}"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Free Work Izquierdo</ion-label>
+      <ion-toggle (click)='action("free work izquierdo")' checked="{{lights.freeWorkIzquierdo}}"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Inno-Bar</ion-label>
+      <ion-toggle (click)='action("inno-bar")' checked="{{lights.innoBar}}"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Letrero</ion-label>
+      <ion-toggle (click)='action("letrero")' checked="{{lights.letrero}}"></ion-toggle>
+    </ion-item>
+  </ion-list>
 </ion-content>
