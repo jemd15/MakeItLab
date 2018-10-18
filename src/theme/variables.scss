@@ -34,12 +34,20 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
+  primary:    #212731,
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  green:      #5D9E61,
+  yellow:     #E5B635,
+  red:        #AC2421,
+  purple:     #594A91,
+  blue:       #5E92CA,
+  black:      #000,
+  grey:       grey
 );
+
 
 
 // App iOS Variables
@@ -86,3 +94,13 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+@font-face{
+  font-family: 'KatahdinRound';
+  // font-weight: 300;
+  font-style: normal;
+  src: url('../assets/fonts/KatahdinRound.otf');
+  font-size: 1rem !important;
+}
+$font-family-md-base: "KatahdinRound";
+$font-family-ios-base: "KatahdinRound";
+$font-family-wp-base: "KatahdinRound";

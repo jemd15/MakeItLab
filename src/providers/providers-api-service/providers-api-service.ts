@@ -59,7 +59,12 @@ export class ProvidersApiServiceProvider {
         data.ip = '192.168.0.62'
         data.id = 12
       break
+      case 'meeting space':
+        data.ip = ''
+        data.id = ''
+      break
     }
+    console.log(`http://${data.ip}:${data.port}/onled/${data.id}`)
     return this.api.get(`http://${data.ip}:${data.port}/onled/${data.id}`).toPromise()
   }
 
@@ -110,7 +115,12 @@ export class ProvidersApiServiceProvider {
         data.ip = '192.168.0.62'
         data.id = 12
       break
+      case 'meeting space':
+        data.ip = ''
+        data.id = ''
+      break
     }
+    console.log(`http://${data.ip}:${data.port}/offled/${data.id}`)
     return this.api.get(`http://${data.ip}:${data.port}/offled/${data.id}`).toPromise()
   }
 
@@ -161,7 +171,12 @@ export class ProvidersApiServiceProvider {
         data.ip = '192.168.0.62'
         data.id = 12
       break
+      case 'meeting space':
+        data.ip = ''
+        data.id = ''
+      break
     }
+    console.log(`http://${data.ip}:${data.port}/estado/${data.id}`)
     return this.api.get(`http://${data.ip}:${data.port}/estado/${data.id}`).toPromise()
   }
 

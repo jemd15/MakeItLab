@@ -1,3 +1,33 @@
 page-home {
-
+    .scroll-content{
+        background-color: #303843;
+        // background-image: url('../../assets/imgs/uss-logo.svg');
+        // background-repeat: no-repeat;
+    }
+    h1, ion-label{
+        color: white;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    }
+    .green{
+        color: #5D9E61;
+    }
+    .yellow{
+        color: #E5B635;
+    }
+    .red{
+        color: #AC2421;
+    }
+    .purple{
+        color: #594A91;
+    }
+    .blue{
+        color: #5E92CA;
+    }
+    .black{
+        color: #000;
+    }
+    .text-logo{
+        width: 50%;
+        // height: auto;
+    }
 }

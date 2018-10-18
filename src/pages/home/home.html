@@ -1,52 +1,65 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color='primary'>
     <ion-title>
-      Make It Lab App
+      <img class="text-logo" src="../../assets/imgs/Makeit-logo.png">
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-label>Cowork</ion-label>
-      <ion-toggle (click)='action("cowork")' checked="{{lights.cowork}}"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Workshop Central</ion-label>
-      <ion-toggle (click)='action("workshop central")' checked="{{lights.workshopCentral}}"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Workshop Lateral</ion-label>
-      <ion-toggle (click)='action("workshop lateral")' checked="{{lights.workshopLateral}}"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Impresoras 3D</ion-label>
-      <ion-toggle (click)='action("impresoras 3d")' checked="{{lights.impresoras3D}}"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Ideas 1</ion-label>
-      <ion-toggle (click)='action("ideas 1")' checked="{{lights.ideas1}}"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Ideas 2</ion-label>
-      <ion-toggle (click)='action("ideas 2")' checked="{{lights.ideas2}}"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Free Work Derecho</ion-label>
-      <ion-toggle (click)='action("free work derecho")' checked="{{lights.freeWorkDerecho}}"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Free Work Izquierdo</ion-label>
-      <ion-toggle (click)='action("free work izquierdo")' checked="{{lights.freeWorkIzquierdo}}"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Inno-Bar</ion-label>
-      <ion-toggle (click)='action("inno-bar")' checked="{{lights.innoBar}}"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Letrero</ion-label>
-      <ion-toggle (click)='action("letrero")' checked="{{lights.letrero}}"></ion-toggle>
-    </ion-item>
-  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-label text-center><h1>Control de Luces <ion-icon name="bulb"></ion-icon></h1></ion-label>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>
+        <button ion-button block (click)='action("cowork")' [color]="lights.cowork ? 'blue' : 'grey'">{{lights.cowork ? 'Encendido':'Apagado'}}</button>
+        <ion-label text-wrap text-center class="blue">Cowork</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button block (click)='action("workshop central")' [color]="lights.workshopCentral ? 'red' : 'grey'">{{lights.workshopCentral ? 'Encendido':'Apagado'}}</button>
+        <ion-label text-wrap text-center class="red">Workshop Central</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button block (click)='action("workshop lateral")' [color]="lights.workshopLateral ? 'red' : 'grey'">{{lights.workshopLateral ? 'Encendido':'Apagado'}}</button>
+        <ion-label text-wrap text-center class="red">Workshop Lateral</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button block (click)='action("impresoras 3d")' [color]="lights.impresoras3D ? 'purple' : 'grey'">{{lights.impresoras3D ? 'Encendido':'Apagado'}}</button>
+        <ion-label text-wrap text-center class="purple">Impresoras 3D</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button block (click)='action("ideas 1")' [color]="lights.ideas1 ? 'green' : 'grey'">{{lights.ideas1 ? 'Encendido':'Apagado'}}</button>
+        <ion-label text-wrap text-center class="green">Ideas 1</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button block (click)='action("ideas 2")' [color]="lights.ideas2 ? 'green' : 'grey'">{{lights.ideas2 ? 'Encendido':'Apagado'}}</button>
+        <ion-label text-wrap text-center class="green">Ideas 2</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button block (click)='action("free work derecho")' [color]="lights.freeWorkDerecho ? 'yellow' : 'grey'">{{lights.freeWorkDerecho ? 'Encendido':'Apagado'}}</button>
+        <ion-label text-wrap text-center class="yellow">Free Work Derecho</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button block (click)='action("free work izquierdo")' [color]="lights.freeWorkIzquierdo ? 'yellow' : 'grey'">{{lights.freeWorkIzquierdo ? 'Encendido':'Apagado'}}</button>
+        <ion-label text-wrap text-center class="yellow">Free Work Izquierdo</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button block (click)='action("inno-bar")' [color]="lights.innoBar ? 'light' : 'grey'">{{lights.innoBar ? 'Encendido':'Apagado'}}</button>
+        <ion-label text-wrap text-center>Inno-Bar</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button block (click)='action("letrero")' [color]="lights.letrero ? 'light' : 'grey'">{{lights.letrero ? 'Encendido':'Apagado'}}</button>
+        <ion-label text-wrap text-center>Letrero</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button block (click)='action("meeting space")' [color]="lights.meetingSpace ? 'black' : 'grey'">{{lights.meetingSpace ? 'Encendido':'Apagado'}}</button>
+        <ion-label text-wrap text-center>Meeting Space</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button block (click)='action("all")' [color]="lights.all ? 'green' : 'red'">{{lights.all ? 'Encendido':'Apagado'}}</button>
+        <ion-label text-wrap text-center>Todo</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
